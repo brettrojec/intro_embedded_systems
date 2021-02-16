@@ -1,1 +1,6 @@
-/* Add Author and Project Details here */
+/* 
+Author - brett🦕
+
+Project - Coursera Introduction to Embedded Systems Software and Development Environments Week 1 assignment
+
+*/

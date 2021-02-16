@@ -9,32 +9,73 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief statistics function declarations for unsigned char array
  *
- * <Add Extended Description Here>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author brett🦕
+ * @date 2021-01-14
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+/**
+ * @brief A function that prints the statistics of an array including minimum, maximum, mean, and median. 
+ * 
+ * Side effect - array is sorted.
+ * @param arr - array to print
+ * @param len - length of <arr>
+ **/
+void print_statistics(unsigned char arr[], int len);
 
 /**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
+ * @brief Given an array of data and a length, prints the array to the screen
+ * @param arr - array to print
+ * @param len - length of <arr>
+ **/
+void print_array(unsigned char arr[], int len);
 
+/**
+ * @brief Given a SORTED array of data and a length, returns the median value
+ * @param arr - the array
+ * @param len - length of <arr>
+ * @return - median value of <arr>
+ **/
+float find_median(unsigned char arr[], int len);
+
+/**
+ * @brief Given an array of data and a length, returns the mean
+ * @param arr - the array
+ * @param len - length of <arr>
+ * @return - the mean value of <arr>
+ **/
+float find_mean(unsigned char arr[], int len);
+
+/**
+ * @brief Given an array of data and a length, returns the maximum
+ * @param arr - the array
+ * @param len - length of <arr>
+ * @return - maximum value in <arr>
+ **/
+unsigned char find_maximum(unsigned char arr[], int len);
+
+/**
+ * @brief Given an array of data and a length, returns the minimum value
+ * @param arr - the array
+ * @param len - length of <arr>
+ * @return - minimum value in <arr>
+ **/
+unsigned char find_minimum(unsigned char arr[], int len);
+
+/**
+ * @brief Given an array of data and a length, sorts the array from largest to smallest.  (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+ * Use the CountingSort algorithm to sort (descending) the input array of unsigned characters.
+ * 
+ * @param arr - the array
+ * @param len - length of <arr>
+ * @return - a new array of lenght <len>, containing the sorted values of <arr>
+ **/
+void sort_array(unsigned char arr[], int len);
 
 #endif /* __STATS_H__ */
